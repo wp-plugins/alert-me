@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Alert Me!
-Version: 0.2
+Version: 0.2.1
 Plugin URI: http://getbutterfly.com/wordpress-plugins/wordpress-alert-me/
 Description: Alert me with a nice message! Just like that!
 Author: Ciprian Popescu
@@ -45,7 +45,7 @@ add_shortcode('alert', 'alert_me'); // shortcode, function
 
 function am_styles() {
 	echo '
-	<style type="text/css">
+<style type="text/css">
 .am_info, .am_success, .am_warning, .am_error {
 	font-family: inherit;
 	font-weight: normal;
@@ -56,38 +56,38 @@ function am_styles() {
     background-position: 10px center;
 
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .am_info:hover, .am_success:hover, .am_warning:hover, .am_error:hover {
-
-filter: grayscale(100%);
--webkit-filter: grayscale(100%);
--moz-filter: grayscale(100%);
--ms-filter: grayscale(100%);
--o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
 }
 .am_info {
-    color: #00529B;
-    background-color: #BDE5F8;
-    background-image: url("' . AM_PLUGIN_URL . '/images/info.png");
+	color: #00529B;
+	background-color: #BDE5F8;
+	background-image: url("' . AM_PLUGIN_URL . '/images/info.png");
 }
 .am_success {
-    color: #4F8A10;
-    background-color: #DFF2BF;
-    background-image:url("' . AM_PLUGIN_URL . '/images/success.png");
+	color: #4F8A10;
+	background-color: #DFF2BF;
+	background-image: url("' . AM_PLUGIN_URL . '/images/success.png");
 }
 .am_warning {
-    color: #9F6000;
-    background-color: #FEEFB3;
-    background-image: url("' . AM_PLUGIN_URL . '/images/warning.png");
+	color: #9F6000;
+	background-color: #FEEFB3;
+	background-image: url("' . AM_PLUGIN_URL . '/images/warning.png");
 }
 .am_error {
-    color: #D8000C;
-    background-color: #FFBABA;
-    background-image: url("' . AM_PLUGIN_URL . '/images/error.png");
+	color: #D8000C;
+	background-color: #FFBABA;
+	background-image: url("' . AM_PLUGIN_URL . '/images/error.png");
 }
-	</style>';
+</style>';
 }
 
 add_action('wp_head', 'am_styles');

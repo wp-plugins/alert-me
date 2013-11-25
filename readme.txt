@@ -2,9 +2,9 @@
 Contributors: butterflymedia, getbutterfly
 Tags: alert, CSS3, bar, warning, info, success, error
 License: GPLv3
-Requires at least: 3.0
-Tested up to: 3.6-beta1
-Stable tag: 0.2
+Requires at least: 3.3
+Tested up to: 3.8-beta-1
+Stable tag: 0.2.1
 
 == Description ==
 
@@ -28,6 +28,9 @@ Alert types:
 3. Create and publish a new page and add this shortcode: `[alert type="type"]hidden text[/alert]`
 
 == Changelog ==
+
+= 0.2.1 =
+* CSS adjustments
 
 = 0.2 =
 * First public release
