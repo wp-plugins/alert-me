@@ -1,10 +1,12 @@
 === Alert Me! ===
 Contributors: butterflymedia, getbutterfly
+Donate link: http://getbutterfly.com/wordpress-plugins-free/
 Tags: alert, CSS3, bar, warning, info, success, error
-License: GPLv3
 Requires at least: 3.3
-Tested up to: 3.8-beta-1
-Stable tag: 0.2.1
+Tested up to: 3.8
+Stable tag: 0.2.2
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
@@ -28,6 +30,10 @@ Alert types:
 3. Create and publish a new page and add this shortcode: `[alert type="type"]hidden text[/alert]`
 
 == Changelog ==
+
+= 0.2.2 =
+* Added license link
+* Added donate link
 
 = 0.2.1 =
 * CSS adjustments
