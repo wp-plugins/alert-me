@@ -2,15 +2,15 @@
 Contributors: butterflymedia, getbutterfly
 Donate link: http://getbutterfly.com/wordpress-plugins-free/
 Tags: alert, CSS3, bar, warning, info, success, error
-Requires at least: 3.3
-Tested up to: 3.8
-Stable tag: 0.2.2
+Requires at least: 3.5
+Tested up to: 4.0
+Stable tag: 0.2.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Alert generator plugin. Generates a slick CSS3 alert bar (info, warning, success, error)
+Alert generator plugin. Generates a slick CSS3 alert bar (info, warning, success, error).
 
 Use it by inserting a simple shortcode:
 
@@ -30,6 +30,10 @@ Alert types:
 3. Create and publish a new page and add this shortcode: `[alert type="type"]hidden text[/alert]`
 
 == Changelog ==
+
+= 0.2.3 =
+* Minified scoped CSS
+* Updated WordPress compatibility
 
 = 0.2.2 =
 * Added license link
