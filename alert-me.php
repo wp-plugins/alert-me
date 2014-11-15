@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Alert Me!
-Version: 0.2.5
+Version: 0.2.6
 Plugin URI: http://getbutterfly.com/wordpress-plugins/wordpress-alert-me/
 Description: Alert me with a nice message! Just like that!
 Author: Ciprian Popescu

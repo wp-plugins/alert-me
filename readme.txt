@@ -4,7 +4,7 @@ Donate link: http://getbutterfly.com/wordpress-plugins-free/
 Tags: alert, CSS3, bar, warning, info, success, error, note
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 0.2.5
+Stable tag: 0.2.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,6 +31,10 @@ Alert types:
 3. Create and publish a new page and add this shortcode: `[alert type="type"]your alert text here[/alert]`
 
 == Changelog ==
+
+= 0.2.6 =
+* Changed icon size
+* Tweaked style
 
 = 0.2.5 =
 * Added FontAwesome icons
