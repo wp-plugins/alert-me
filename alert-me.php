@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Alert Me!
-Version: 0.2.4
+Version: 0.2.5
 Plugin URI: http://getbutterfly.com/wordpress-plugins/wordpress-alert-me/
 Description: Alert me with a nice message! Just like that!
 Author: Ciprian Popescu
@@ -22,13 +22,18 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
- * Usage: [alert type="info"]Alert here![/alert]
- * Usage: [alert type="success"]Alert here![/alert]
- * Usage: [alert type="warning"]Alert here![/alert]
- * Usage: [alert type="error"]Alert here![/alert]
+ * Usage: [alert type="info"]Info here![/alert]
+ * Usage: [alert type="success"]Success here![/alert]
+ * Usage: [alert type="warning"]Warning here![/alert]
+ * Usage: [alert type="error"]Error here![/alert]
+ * Usage: [alert type="note"]Note here![/alert]
  */
 
-define('AM_PLUGIN_URL', WP_PLUGIN_URL . '/' . dirname(plugin_basename(__FILE__)));
+add_action('wp_enqueue_scripts', 'alert_me_enqueue_scripts');
+function alert_me_enqueue_scripts($hook_suffix) {
+    wp_enqueue_style('fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+	wp_enqueue_style('gbam', plugins_url('css/alerts.css', __FILE__));
+}
 
 function alert_me($atts, $content = null) {
 	extract(shortcode_atts(array(
@@ -39,10 +44,4 @@ function alert_me($atts, $content = null) {
 }
 
 add_shortcode('alert', 'alert_me');
-
-function am_styles() {
-	echo '<style>.am_error,.am_info,.am_success,.am_warning{font-family:inherit;font-weight:400;border-left:3px solid;margin:10px 0;padding:15px 10px 15px 50px;background-repeat:no-repeat;background-position:10px center;-webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);-moz-box-shadow:0 1px 2px rgba(0,0,0,.1);box-shadow:0 1px 2px rgba(0,0,0,.1)}.am_error:hover,.am_info:hover,.am_success:hover,.am_warning:hover{filter:grayscale(100%);-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%)}.am_info{color:#00529B;background-color:#BDE5F8;background-image:url("' . AM_PLUGIN_URL . '/images/info.png")}.am_success{color:#4F8A10;background-color:#DFF2BF;background-image:url("' . AM_PLUGIN_URL . '/images/success.png")}.am_warning{color:#9F6000;background-color:#FEEFB3;background-image:url("' . AM_PLUGIN_URL . '/images/warning.png")}.am_error{color:#D8000C;background-color:#FFBABA;background-image:url("' . AM_PLUGIN_URL . '/images/error.png")}</style>';
-}
-
-add_action('wp_head', 'am_styles');
 ?>
