@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: Alert Me!
-Version: 0.2.6
+Version: 0.2.7
 Plugin URI: http://getbutterfly.com/wordpress-plugins/wordpress-alert-me/
 Description: Alert me with a nice message! Just like that!
 Author: Ciprian Popescu
 Author URI: http://getbutterfly.com/
 
-Copyright 2012, 2013, 2014 Ciprian Popescu (email: getbutterfly@gmail.com)
+Copyright 2012, 2013, 2014, 2015 Ciprian Popescu (email: getbutterfly@gmail.com)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 add_action('wp_enqueue_scripts', 'alert_me_enqueue_scripts');
 function alert_me_enqueue_scripts($hook_suffix) {
-    wp_enqueue_style('fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+    wp_enqueue_style('fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 	wp_enqueue_style('gbam', plugins_url('css/alerts.css', __FILE__));
 }
 
