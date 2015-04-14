@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Alert Me!
-Version: 0.2.7
-Plugin URI: http://getbutterfly.com/wordpress-plugins/wordpress-alert-me/
-Description: Alert me with a nice message! Just like that!
+Version: 0.2.8
+Plugin URI: http://getbutterfly.com/wordpress-plugins-free/
+Description: Alert me with a nice message! Just like that! Alert generator plugin. Generates a slick CSS3 alert bar (info, warning, success, error). Use it by inserting a simple shortcode.
 Author: Ciprian Popescu
 Author URI: http://getbutterfly.com/
 
@@ -29,9 +29,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * Usage: [alert type="note"]Note here![/alert]
  */
 
-add_action('wp_enqueue_scripts', 'alert_me_enqueue_scripts');
 function alert_me_enqueue_scripts($hook_suffix) {
-    wp_enqueue_style('fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+	wp_enqueue_style('fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 	wp_enqueue_style('gbam', plugins_url('css/alerts.css', __FILE__));
 }
 
@@ -42,6 +41,8 @@ function alert_me($atts, $content = null) {
 
 	return '<div class="am_' . $type . '">' . $content . '</div>';
 }
+
+add_action('wp_enqueue_scripts', 'alert_me_enqueue_scripts');
 
 add_shortcode('alert', 'alert_me');
 ?>
